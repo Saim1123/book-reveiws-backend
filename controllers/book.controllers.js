@@ -3,7 +3,7 @@ import Book from "../models/Book.js";
 
 export const getBooks = async (req, res) => {
   const books = await Book.find({});
-  res.json({ message: `${books.length} books`, data: books });
+  res.status(200).json({ message: `${books.length} books`, data: books });
 };
 
 export const getBookById = async (req, res) => {
