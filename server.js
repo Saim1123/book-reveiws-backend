@@ -26,6 +26,10 @@ app.use(
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/book", bookRoutes);
 
+app.get("/", (req, res) => {
+  res.send(200).send("Welcome");
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, console.log(`Server running on port ${port}`));
